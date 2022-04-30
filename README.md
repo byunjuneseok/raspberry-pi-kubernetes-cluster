@@ -1,2 +1,3 @@
 # raspberry-pi-kubernetes-cluster
-Build cluster with multiple raspberry pi devices.
+
+🚢 Operating kubernetes at home =]
