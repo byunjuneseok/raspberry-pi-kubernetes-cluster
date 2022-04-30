@@ -21,3 +21,11 @@ kubectl -n monitoring port-forward $POD_NAME 8443:8443
 ```
 chrome://flags/#allow-insecure-localhost
 ```
+
+
+### Get token to user.
+```shell
+kubectl get secrets
+kubectl describe secret default-token-?????
+kubectl config set-credentials kubernetes-admin --token: <TOKEN-HERE>
+```
