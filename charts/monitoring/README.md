@@ -6,4 +6,5 @@ kubectl create ns monitoring
 ```
 
 ## Charts
+- [kubernetes-dashboard](./kubernetes-dashboard/README.md)
 - [Prometheus](./prometheus/README.md)
