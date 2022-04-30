@@ -6,4 +6,4 @@ kubectl create ns ingress
 ```
 
 ## Charts
-- [traefik](./traefik/README.md)
+- [nginx-ingress](./nginx-ingress/README.md)
