@@ -1,8 +1,9 @@
-# Namespace: Ingress
+# Network
 
-## Create namespace
+## Create namespaces
 ```shell
 kubectl create ns ingress
+kubectl create ns metallb
 ```
 
 ## Charts

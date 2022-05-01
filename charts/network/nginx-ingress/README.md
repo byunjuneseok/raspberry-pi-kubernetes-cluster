@@ -11,3 +11,8 @@ helm repo update
 ```shell
 helm install --namespace ingress nginx-ingress nginx-stable/nginx-ingress -f values.yaml
 ```
+
+## Upgrade
+```shell
+helm upgrade --namespace ingress nginx-ingress nginx-stable/nginx-ingress -f values.yaml
+```
