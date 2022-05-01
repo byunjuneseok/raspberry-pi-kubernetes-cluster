@@ -3,12 +3,22 @@ redis-ha:
 
 controller:
   enableStatefulSet: true
+  replicas: 2
+  env:
+    - name: ARGOCD_CONTROLLER_REPLICAS
+      value: '2'
 
 server:
   replicas: 2
   env:
     - name: ARGOCD_API_SERVER_REPLICAS
       value: '2'
+
+  ingress:
+    enabled: true
+    ingressClassName: "nginx"
+    hosts:
+      - argo.binaryflavor.com
 
 repoServer:
   replicas: 2

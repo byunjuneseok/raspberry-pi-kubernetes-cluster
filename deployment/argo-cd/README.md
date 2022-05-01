@@ -1,5 +1,5 @@
 # Argo CD
-- https://artifacthub.io/packages/helm/argo/argo-cd?modal=values
+- https://artifacthub.io/packages/helm/argo/argo-cd
 
 
 ##
@@ -12,6 +12,11 @@ helm repo update
 ## Install
 ```shell
 helm install --namespace deployment argocd argo/argo-cd -f values.yaml
+```
+
+## Upgrade
+```shell
+helm upgrade --namespace deployment argocd argo/argo-cd -f values.yaml
 ```
 
 ## Create port-forward

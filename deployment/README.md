@@ -1,4 +1,4 @@
-# namespace: deployment
+# Deployment
 
 ## Create namespace
 ```shell
