@@ -7,7 +7,7 @@ helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 
 ## Install
 ```shell
-helm install kubernetes-dashboard/kubernetes-dashboard --namespace monitoring --generate-name
+helm install --namespace monitoring kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
 ```
 
 ## Access the dashboard
@@ -27,5 +27,5 @@ chrome://flags/#allow-insecure-localhost
 ```shell
 kubectl get secrets
 kubectl describe secret default-token-?????
-kubectl config set-credentials kubernetes-admin --token: <TOKEN-HERE>
+kubectl config set-credentials kubernetes-admin --token <TOKEN-HERE>
 ```

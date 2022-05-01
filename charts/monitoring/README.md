@@ -1,4 +1,4 @@
-# Namespace: Monitoring
+# Monitoring
 
 ## Create namespace
 ```shell
