@@ -7,5 +7,11 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 
 ## Install
 ```shell
-helm install prometheus-community/kube-prometheus-stack --namespace monitoring --generate-name
+helm install --namespace monitoring kube-prometheus-stack prometheus-community/kube-prometheus-stack -f values.yaml
+```
+
+
+## Upgrade
+```shell
+helm upgrade --namespace monitoring kube-prometheus-stack prometheus-community/kube-prometheus-stack -f values.yaml
 ```
