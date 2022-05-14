@@ -10,6 +10,7 @@ helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 helm install --namespace monitoring kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
 ```
 
+
 ## Access the dashboard
 ```shell
 export POD_NAME=$(kubectl get pods -n monitoring -l "app.kubernetes.io/name=kubernetes-dashboard,app.kubernetes.io/instance=kubernetes-dashboard-1651314062" -o jsonpath="{.items[0].metadata.name}")

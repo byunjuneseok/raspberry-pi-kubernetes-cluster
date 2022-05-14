@@ -2,9 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: hello-api
+  annotations:
+    # ingress.kubernetes.io/ssl-redirect: "true"
+    # kubernetes.io/tls-acme: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    acme.cert-manager.io/http01-edit-in-place: "true"
 spec:
+  tls:
+    - hosts:
+      - hello.binaryflavor.com
+      secretName: hello-api-cert
   rules:
-  - host: "hello.binaryflavor.com"
+  - host: hello.binaryflavor.com
     http:
       paths:
       - path: /

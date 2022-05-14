@@ -17,3 +17,8 @@ helm install --namespace cert-manager cert-manager jetstack/cert-manager
 kubectl apply --validate=false -f https://github.com/cert-manager/cert-manager/releases/download/v1.8.0/cert-manager.yaml
 ```
 
+## Create cluster issuer
+```shell
+kubectl apply -f cluster-issuer.yaml
+kubectl get clusterissuer -o wide
+```

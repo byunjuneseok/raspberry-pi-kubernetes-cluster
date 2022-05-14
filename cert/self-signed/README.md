@@ -7,5 +7,5 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ingress.key -out ing
 
 ## Create TLS
 ```shell
-kubectl create secret tls httpstls --key ingress.key --cert ingress.cert --namespace https
+kubectl create secret tls ssl --key ingress.key --cert ingress.cert --namespace hello-api
 ```
