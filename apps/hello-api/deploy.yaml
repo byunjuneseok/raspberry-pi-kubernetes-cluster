@@ -16,4 +16,4 @@ spec:
         - name: hello-api
           image: 444975471869.dkr.ecr.ap-northeast-2.amazonaws.com/hello-api:latest
       imagePullSecrets:
-        - name: regcred
+      - name: aws-registry

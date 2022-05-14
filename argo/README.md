@@ -2,7 +2,7 @@
 
 ## Create namespace
 ```shell
-kubectl create ns deployment
+kubectl create ns argo
 ```
 
 ## Charts
