@@ -6,10 +6,11 @@ server:
   ingress:
     enabled: true
     annotations:
-      # nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-      # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
       cert-manager.io/cluster-issuer: letsencrypt-prod
+      kubernetes.io/tls-acme: "true"
+      nginx.ingress.kubernetes.io/ssl-passthrough: "true"
       acme.cert-manager.io/http01-edit-in-place: "true"
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
     ingressClassName: nginx
     hosts:
       - argo.binaryflavor.com
